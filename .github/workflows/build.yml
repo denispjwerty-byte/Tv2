@@ -11,7 +11,7 @@ jobs:
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses || true
       - uses: gradle/actions/setup-gradle@v4
         with: { gradle-version: 8.7 }
-      - run: unzip -q SharksLauncher1-1.zip && cd SharksLauncher && gradle :app:assembleDebug --no-daemon
+      - run: unzip -q SharksLauncherv1-1.zip && cd SharksLauncher && gradle :app:assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: SharksLauncher-apk
